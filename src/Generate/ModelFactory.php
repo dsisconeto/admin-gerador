@@ -40,7 +40,7 @@ class ModelFactory extends FileAppender {
             $this->view = 'templates.'.$template.'.factory';
         }
 
-        if ($this->appendIfNotAlreadyAppended(base_path('database/factories/ModelFactory.php'), $this->buildClass())){
+        if ($this->appendIfNotAlreadyAppended(base_path("Modules/{$this->moduleName}/Database/factories/ModelFactory.php"), $this->buildClass())){
             $this->info('Appending '.$this->modelBaseName.' model to ModelFactory finished');
         }
 
